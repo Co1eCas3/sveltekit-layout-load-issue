@@ -2,7 +2,7 @@
   export async function load() {
     console.log("load");
     return {
-      props: { someVar: "something" },
+      props: { someVar: "I'm a `load()` prop!" },
     };
   }
 </script>
@@ -13,14 +13,14 @@
 
   function changeSomeVar() {
     console.log("editing someVar");
-    someVar += " else;";
+    someVar += " changed!";
   }
 </script>
 
 <main>
   <header>
     <h1>{someVar}</h1>
-    <button on:click={changeSomeVar}>Change somevar</button>
+    <button on:click={changeSomeVar}>Change the prop</button>
   </header>
 
   <section>
